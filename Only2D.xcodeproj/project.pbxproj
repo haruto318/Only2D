@@ -18,6 +18,7 @@
 		64331B1C2C3D1047008E8BD9 /* MessagePresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64331B1B2C3D1047008E8BD9 /* MessagePresenting.swift */; };
 		64331B1F2C3D1073008E8BD9 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64331B1E2C3D1073008E8BD9 /* LocationService.swift */; };
 		64331B212C3D1081008E8BD9 /* LocationServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64331B202C3D1081008E8BD9 /* LocationServiceDelegate.swift */; };
+		64B3B41A2C3E5E8B0084A436 /* OrientationRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B3B4192C3E5E8B0084A436 /* OrientationRecord.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		64331B1B2C3D1047008E8BD9 /* MessagePresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePresenting.swift; sourceTree = "<group>"; };
 		64331B1E2C3D1073008E8BD9 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		64331B202C3D1081008E8BD9 /* LocationServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceDelegate.swift; sourceTree = "<group>"; };
+		64B3B4192C3E5E8B0084A436 /* OrientationRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationRecord.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				64331B0C2C3D0F5F008E8BD9 /* Assets.xcassets */,
 				64331B0E2C3D0F5F008E8BD9 /* LaunchScreen.storyboard */,
 				64331B112C3D0F5F008E8BD9 /* Info.plist */,
+				64B3B4192C3E5E8B0084A436 /* OrientationRecord.swift */,
 			);
 			path = Only2D;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64B3B41A2C3E5E8B0084A436 /* OrientationRecord.swift in Sources */,
 				64331B1F2C3D1073008E8BD9 /* LocationService.swift in Sources */,
 				64331B082C3D0F5E008E8BD9 /* ViewController.swift in Sources */,
 				64331B042C3D0F5E008E8BD9 /* AppDelegate.swift in Sources */,
@@ -323,6 +327,7 @@
 				DEVELOPMENT_TEAM = QC8NW9PFKL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Only2D/Info.plist;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
@@ -356,6 +361,7 @@
 				DEVELOPMENT_TEAM = QC8NW9PFKL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Only2D/Info.plist;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";

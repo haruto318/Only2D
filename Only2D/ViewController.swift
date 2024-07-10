@@ -38,6 +38,21 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIPickerViewDelega
     var orientationTimer: Timer?
     var orientationRecords: [OrientationRecord] = []
     
+    let coordinates: [(id: Character, coordinate: CGPoint)] = [
+        (id: "G", coordinate: CGPoint(x: 127, y: 361)),
+        (id: "H", coordinate: CGPoint(x: 165, y: 361)),
+        (id: "F", coordinate: CGPoint(x: 127, y: 442)),
+        (id: "I", coordinate: CGPoint(x: 165, y: 442)),
+        (id: "E", coordinate: CGPoint(x: 127, y: 527)),
+        (id: "J", coordinate: CGPoint(x: 165, y: 527)),
+        (id: "D", coordinate: CGPoint(x: 127, y: 609)),
+        (id: "C", coordinate: CGPoint(x: 127, y: 688)),
+        (id: "B", coordinate: CGPoint(x: 127, y: 771)),
+        (id: "M", coordinate: CGPoint(x: 165, y: 771)),
+        (id: "A", coordinate: CGPoint(x: 127, y: 850)),
+        (id: "N", coordinate: CGPoint(x: 165, y: 850))
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -59,9 +74,6 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIPickerViewDelega
         setupPickerGroupView()
         setupResetButton()
         setupStopButton()
-        
-        // Add annotation
-        addAnnotation(at: CGPoint(x: 131, y: 846), title: "location")
     }
     
     private func setupResetButton() {
@@ -286,6 +298,11 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIPickerViewDelega
         
         self.pickerGroupView.isHidden = true
         
+        let startCoordinate = getCoordinate(byId: start)
+        addAnnotation(at: startCoordinate, title: "Start")
+        let goalCoordinate = getCoordinate(byId: goal)
+        addAnnotation(at: goalCoordinate, title: "Goal")
+        
         let nodes = createNodes()
         if let startNode = nodes[start], let goalNode = nodes[goal] {
             let path = aStar(startNode: startNode, goalNode: goalNode)
@@ -294,6 +311,10 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIPickerViewDelega
             
             startOrientationRecording()
         }
+    }
+    
+    func getCoordinate(byId id: Character) -> CGPoint {
+        return coordinates.first { $0.id == id }!.coordinate
     }
     
     func createNodes() -> [Character: Node] {
